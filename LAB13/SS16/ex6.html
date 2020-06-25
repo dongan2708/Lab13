@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Application</title>
+    <meta name="viewport" content="width=device-width"/>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font-weight: normal;
+            vertical-align: baseline;
+            background: transparent;
+        }
+        body{
+            line-height: inherit;
+        }
+        #nav{
+            width: 500px;
+            height: 60px;
+            background-color: #a4a4ff;
+            margin: 0px;
+            margin-top: 5px;
+            padding: 0px;
+        }
+        ul#navigation{
+            margin: 0px;
+            border-left: 1px solid #c4bbe7;
+            border-right: 1px solid #c4bbe7;
+            padding-top: 5px;
+        }
+        ul#navigation li{
+            display: inline;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0;
+            padding:0;
+            float:left;
+            position:relative;
+            border-top:1px solid #c4dbe7;
+            border-bottom:2px solid #c4dbe7;
+        }
+        ul#navigation li a {
+            padding:10px;
+            color:#616161;
+            text-shadow:1px 1px 0px #fff;
+            text-decoration:none;
+            display:inline-block;
+            border-right:1px solid #fff;
+            border-left:1px solid #C2C2C2;
+            border-top:1px solid #fff;
+        background:#f6f6f5;
+        -webkit-transition:color 0.2s linear, background 0.2s linear;
+        -moz-transition:color 0.2s linear, background 0.2s linear;
+        -o-transition:color 0.2s linear, background 0.2s linear;
+        transition:color 0.2s linear, background 0.2s linear;
+        }
+        ul#navigation li a:hover {
+            background:#f8f8f8;
+            color:red;
+        }
+        p {
+            border: 0;
+            font-size: 100%;
+            font-weight: normal;
+            vertical-align: baseline;
+            background: transparent; }
+
+        a {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+        #intro {
+            background-color: yellow;
+            border: solid black 2px;
+            width: 600px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<header>
+   <section><img src="data:image/png;base64,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"
+       border="1" alt="Arena Animation"title="Arena Animation Home"/>
+       <b> Animation | Multimedia </b>
+   </section>
+    <nav id="nav">
+        <ul id="navigation">
+            <li> <a title="Comprehensive Animation" href="#">Comprehensive
+                Animation Pro</a></li>
+            <li><a title="2D and 3D" href="#">2D &amp; 3D Animation </a></li>
+            <li><a title="3D Animation" href="#">Animation &amp; 3D</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="intro">
+    <p style="font-size:12px;font-size:italic;color:#0000ff">
+        Arena Animation is leader in animation and multimedia education
+        with the widest network of centers across the country.
+        Over a span of 14 years, 250,000 students and professionals have,
+        through Arena, found their calling in animation, graphics, print
+        publishing, web designing & films.</p>
+</section>
+<footer>
+    <p>
+        <a href="tel:+91 22 2827 2300">Contact us </a> <br/>
+        Copyright &copy; 2012 Aptech Ltd.
+    </p>
+</footer>
+</body>
+</html>
